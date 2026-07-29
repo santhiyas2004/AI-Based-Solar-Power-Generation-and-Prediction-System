@@ -1,0 +1,1 @@
+# AI-Based-Solar-Power-Generation-and-Prediction-System
