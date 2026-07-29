@@ -1,0 +1,20 @@
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Python / backend
+backend/__pycache__/
+backend/**/__pycache__/
+backend/venv/
+backend/.venv/
+*.pyc
+
+# Runtime data
+backend/reports/history.json
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+html.dark *::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+body {
+  @apply bg-surface text-ink font-body antialiased;
+}
+
+html.dark body {
+  @apply bg-navy-900 text-slate-100;
+}
+
+/* ---- Reusable component classes ---- */
+.card {
+  @apply bg-white dark:bg-navy-800 rounded-2xl shadow-card border border-slate-100 dark:border-white/5;
+}
+
+.card-glass {
+  @apply bg-white/70 dark:bg-navy-800/60 backdrop-blur-xl rounded-2xl border border-white/40 dark:border-white/10 shadow-premium;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-solar-500 px-5 py-3 font-display font-semibold text-navy-900
+    shadow-glow transition-all duration-200 hover:bg-solar-400 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-navy-800
+    px-5 py-3 font-display font-medium text-ink dark:text-slate-100 transition-all duration-200 hover:border-solar-400 hover:-translate-y-0.5;
+}
+
+.input-field {
+  @apply w-full rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-navy-900/40 px-4 py-2.5 text-sm text-ink dark:text-slate-100
+    placeholder:text-slate-400 outline-none transition-all duration-150 focus:border-solar-500 focus:ring-4 focus:ring-solar-500/15;
+}
+
+.section-label {
+  @apply font-mono text-xs uppercase tracking-[0.2em] text-solar-600 dark:text-solar-400;
+}
+
+.link-active {
+  @apply bg-white/10 text-white;
+}
